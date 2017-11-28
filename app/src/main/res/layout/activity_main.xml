@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,13 +7,52 @@
     android:layout_height="match_parent"
     tools:context="com.cwc.selectview.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.cwc.selectview.SelectLinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:multi_select_enabled="true"
+        app:select_can_cancel="true">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一"
+            android:textColor="@drawable/selector_text"
+            android:background="@drawable/selector_bac"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="二"
+            android:textColor="@drawable/selector_text"
+            android:background="@drawable/selector_bac"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="三"
+            android:textColor="@drawable/selector_text"
+            android:background="@drawable/selector_bac"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="四"
+            android:textColor="@drawable/selector_text"
+            android:background="@drawable/selector_bac"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="五"
+            android:textColor="@drawable/selector_text"
+            android:background="@drawable/selector_bac"
+            android:padding="10dp"/>
+
+    </com.cwc.selectview.SelectLinearLayout>
+
+</LinearLayout>

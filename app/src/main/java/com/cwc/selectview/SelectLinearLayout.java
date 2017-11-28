@@ -1,6 +1,7 @@
 package com.cwc.selectview;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -14,16 +15,29 @@ public class SelectLinearLayout extends LinearLayout {
     private boolean selectCanCancel = false;
     private SelectHandler selectHandler;
 
-    public SelectLinearLayout(Context context) {
-        this(context, null);
-    }
-
     public SelectLinearLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
     public SelectLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SelectLinearLayout, defStyleAttr, 0);
+        multiSelectEnabled = a.getBoolean(R.styleable.SelectLinearLayout_multi_select_enabled, false);
+        selectCanCancel = a.getBoolean(R.styleable.SelectLinearLayout_select_can_cancel, false);
+        a.recycle();
+        init();
+    }
+
+
+    public SelectLinearLayout(Context context) {
+        super(context);
+        init();
+    }
+
+    public SelectLinearLayout(Context context, boolean multiSelectEnabled, boolean selectCanCancel) {
+        super(context);
+        this.multiSelectEnabled = multiSelectEnabled;
+        this.selectCanCancel = selectCanCancel;
         init();
     }
 

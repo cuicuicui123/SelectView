@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SelectLinearLayout">
+        <attr name="multi_select_enabled" format="boolean"/>
+        <attr name="select_can_cancel" format="boolean"/>
+    </declare-styleable>
+</resources>
